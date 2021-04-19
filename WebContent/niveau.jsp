@@ -8,11 +8,23 @@
 </head>
 <body>
 <%
-int score=10 ;
-if (score<3) out.println("vous etes un dÈbutant");
-else if (score<5) out.println("vous avez un niveau moyen ");
-else out.println("vous etes un expert !");
-%>
+String n=request.getParameter("nom");
+int html = Integer.parseInt(request.getParameter("html"));
+int prog = Integer.parseInt(request.getParameter("prog"));
+int res = html+prog ;
+
+if (res <3) {
+	%>
+	vous etes un d√©butant
+	<% 
+}
+else if (res<5) {%>
+vous avez un niveau moyen
+<% 
+}else {
+	%>
+	vous etes un expert !
+<%} %>
 
 </body>
 </html>
