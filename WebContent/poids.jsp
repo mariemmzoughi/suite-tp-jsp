@@ -9,16 +9,16 @@
 <body>
 <%
 float t = Float.parseFloat(request.getParameter("t") );
-String f = request.getParameter("f") ;
+
 String h = request.getParameter("h") ;
-String g="" ;
-if (g.equals(f)){
+
+if (h.equals("femme")){
 %>
-votre poids ideal est : <%=  (72.7 * t) - 58 %>
+votre poids ideal est : <%=  (72.7 * t) - 58 %> kg
 <% 	
-}else {
+}if (h.equals("homme")) {
 %>
-votre poids edeal est : <%=  (62.1 * t) - 44.7 %>
+votre poids edeal est : <%=  (62.1 * t) - 44.7 %> kg
 <% 
 }
 %>
